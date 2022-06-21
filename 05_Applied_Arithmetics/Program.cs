@@ -12,12 +12,30 @@ namespace _05_Applied_Arithmetics
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToList();
-
+            Action<List<int>> print = list => Console.WriteLine(String.Join(" ", list));
+            Func<List<int>, List<int>> op = null;
             string cmnd;
 
             while((cmnd = Console.ReadLine()) != "end")
             {
+                if(cmnd == "add")
+                {
+                    op = list => list.Select(number => number += 1).ToList();
+                    numbersList = op(numbersList);
+                }
+                else if(cmnd == "multiply")
+                {
 
+                }
+                else if (cmnd == "subtract")
+                {
+
+                }
+                else if (cmnd == "print")
+                {
+
+                }
+                
             }
         }
     }
