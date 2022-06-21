@@ -9,7 +9,7 @@ namespace _04_Find_Even_Odd
         {
             string range = Console.ReadLine();
             int startRange = int.Parse(range.Split()[0]);
-            int endRange = int.Parse(range.Split()[0]);
+            int endRange = int.Parse(range.Split()[1]);
             string cmnd = Console.ReadLine();
 
             List<int> numbers = new List<int>();
@@ -25,7 +25,7 @@ namespace _04_Find_Even_Odd
             {
                 predicate = numbers => numbers % 2 == 0;
             }
-            else
+            else if(cmnd == "odd")
             {
                 predicate = numbers => numbers % 2 != 0;
             }
