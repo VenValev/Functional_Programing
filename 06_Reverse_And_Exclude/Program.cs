@@ -12,6 +12,19 @@ namespace _06_Reverse_And_Exclude
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToList();
+            int dev = int.Parse(Console.ReadLine());
+
+            Action<List<int>> reverse = i =>
+            {
+                for (int j = 0; j < i.Count / 2; j++)
+                {
+                    int temp = i[j];
+                    i[j] = i[i.Count - 1 - j];
+                    i[i.Count - 1 - j] = temp;
+                }
+            };
+
+
 
         }
     }
