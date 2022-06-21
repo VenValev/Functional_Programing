@@ -9,6 +9,10 @@ namespace _02_Knights_Of_Honor
         static void Main(string[] args)
         {
             List<string> namesList = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            Action<string> sirring = name => Console.WriteLine($"Sir {name}");
+
+            namesList.ForEach(sirring);
         }
     }
 }
