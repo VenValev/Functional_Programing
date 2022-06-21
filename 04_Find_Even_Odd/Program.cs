@@ -16,8 +16,21 @@ namespace _04_Find_Even_Odd
 
             for(int i = startRange; i <= endRange; i++)
             {
-
+                numbers.Add(i);
             }
+
+            Predicate<int> predicate = null;
+
+            if(cmnd == "even")
+            {
+                predicate = numbers => numbers % 2 == 0;
+            }
+            else
+            {
+                predicate = numbers => numbers % 2 != 0;
+            }
+
+            Console.WriteLine(string.Join(' ', numbers.FindAll(predicate)));
         }
     }
 }
