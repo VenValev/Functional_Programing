@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _01_Action_Point
 {
@@ -6,7 +8,11 @@ namespace _01_Action_Point
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<string> names = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+            Action<string> print = name => Console.WriteLine(name);
+
+            names.ForEach(print);
+            
         }
     }
 }
