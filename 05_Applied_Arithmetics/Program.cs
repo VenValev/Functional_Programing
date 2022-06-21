@@ -25,15 +25,17 @@ namespace _05_Applied_Arithmetics
                 }
                 else if(cmnd == "multiply")
                 {
-
+                    op = list => list.Select(number => number *= 2).ToList();
+                    numbersList = op(numbersList);
                 }
                 else if (cmnd == "subtract")
                 {
-
+                    op = list => list.Select(number => number -= 1).ToList();
+                    numbersList = op(numbersList);
                 }
                 else if (cmnd == "print")
                 {
-
+                    print(numbersList);
                 }
                 
             }
