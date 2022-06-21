@@ -24,6 +24,11 @@ namespace _06_Reverse_And_Exclude
                 }
             };
 
+            Predicate<int> exclude = number => number % dev != 0;
+
+            reverse(numbersList);
+
+            Console.WriteLine(string.Join(" ", numbersList.FindAll(exclude))); 
 
 
         }
